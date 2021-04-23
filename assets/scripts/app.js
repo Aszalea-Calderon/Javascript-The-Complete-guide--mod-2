@@ -13,3 +13,4 @@ currentResult = add(2, 3);
 let calculationDescription = `An error \n` + `An error happened`;
 
 outputResult(currentResult, calculationDescription);
+/*Remember to always go back to basics*/
