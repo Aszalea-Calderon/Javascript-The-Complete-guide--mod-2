@@ -8,4 +8,3 @@ function add() {
 addBtn.addEventListener("click", add);
 
 let calculationDescription = `${defaultResult}`;
-/*asflkajsdflkajsdflasd*/
