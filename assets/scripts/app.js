@@ -12,4 +12,18 @@ function add() {
   //You could also convert this to a number by using parseInt(userInput.value) rather than using +userInput.value;
   outputResult(currentResult, calDescription);
 }
+
+function subtract() {
+  alert("subtract");
+}
+
+function multiply() {
+  alert("multiply");
+}
+function divide() {
+  alert("divide");
+}
+divideBtn.addEventListener("click", divide);
+multiplyBtn.addEventListener("click", multiply);
+subtractBtn.addEventListener("click", subtract);
 addBtn.addEventListener("click", add);
