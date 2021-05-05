@@ -4,17 +4,26 @@ let currentResult = defaultResult;
 function getUserInput() {
   return parseInt(userInput.value);
 }
+function createOutput(operator, resultBeforeCal, calNumber) {
+  const calcDescription = `${resultBeforeCal} ${operator} ${calNumber}`;
+  outputResult(currentResult, calcDescription);
+}
 
 function add() {
-  const enteredNumber = getUserNumberInput();
-  const calDescription = `${currentResult} + ${enteredNumber}`;
+  const enteredNumber = getUserInput();
+  const initialResult = currentResult;
   currentResult = currentResult + +enteredNumber;
   //You could also convert this to a number by using parseInt(userInput.value) rather than using +userInput.value;
-  outputResult(currentResult, calDescription);
+  createOutput("+", initialResult, enteredNumber);
+  alert("us");
 }
 
 function subtract() {
-  alert("subtract");
+  const enteredNumber = getUserInput();
+  const initialResult = currentResult;
+  currentResult = currentResult - enteredNumber;
+  createOutput("-", initialResult, enteredNumber);
+  alert("us");
 }
 
 function multiply() {
@@ -23,7 +32,8 @@ function multiply() {
 function divide() {
   alert("divide");
 }
+// addBtn.addEventListener("click", add);
+addBtn.addEventListener("click", add);
 divideBtn.addEventListener("click", divide);
 multiplyBtn.addEventListener("click", multiply);
 subtractBtn.addEventListener("click", subtract);
-addBtn.addEventListener("click", add);
