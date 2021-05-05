@@ -15,7 +15,6 @@ function add() {
   currentResult = currentResult + +enteredNumber;
   //You could also convert this to a number by using parseInt(userInput.value) rather than using +userInput.value;
   createOutput("+", initialResult, enteredNumber);
-  alert("us");
 }
 
 function subtract() {
@@ -23,13 +22,20 @@ function subtract() {
   const initialResult = currentResult;
   currentResult = currentResult - enteredNumber;
   createOutput("-", initialResult, enteredNumber);
-  alert("us");
 }
 
 function multiply() {
-  alert("multiply");
+  const enteredNumber = getUserInput();
+  const initialResult = currentResult;
+  currentResult = currentResult * enteredNumber;
+  createOutput("*", initialResult, enteredNumber);
 }
+
 function divide() {
+  const enteredNumber = getUserInput();
+  const initialResult = currentResult;
+  currentResult = currentResult / enteredNumber;
+  createOutput("/", initialResult, enteredNumber);
   alert("divide");
 }
 // addBtn.addEventListener("click", add);
