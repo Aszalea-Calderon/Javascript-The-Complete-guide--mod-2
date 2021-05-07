@@ -1,14 +1,19 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
+//This is a comment! =)
 
+//This grabs the user input
 function getUserInput() {
   return parseInt(userInput.value);
 }
+
+//Creates output
 function createOutput(operator, resultBeforeCal, calNumber) {
   const calcDescription = `${resultBeforeCal} ${operator} ${calNumber}`;
   outputResult(currentResult, calcDescription);
 }
 
+//Add functions
 function add() {
   const enteredNumber = getUserInput();
   const initialResult = currentResult;
@@ -17,6 +22,7 @@ function add() {
   createOutput("+", initialResult, enteredNumber);
 }
 
+//Subtract function
 function subtract() {
   const enteredNumber = getUserInput();
   const initialResult = currentResult;
@@ -24,6 +30,7 @@ function subtract() {
   createOutput("-", initialResult, enteredNumber);
 }
 
+//Multiply function
 function multiply() {
   const enteredNumber = getUserInput();
   const initialResult = currentResult;
@@ -31,6 +38,7 @@ function multiply() {
   createOutput("*", initialResult, enteredNumber);
 }
 
+//divide function
 function divide() {
   const enteredNumber = getUserInput();
   const initialResult = currentResult;
@@ -39,6 +47,8 @@ function divide() {
   alert("divide");
 }
 // addBtn.addEventListener("click", add);
+
+//Event listeners that pull in from vendor
 addBtn.addEventListener("click", add);
 divideBtn.addEventListener("click", divide);
 multiplyBtn.addEventListener("click", multiply);
