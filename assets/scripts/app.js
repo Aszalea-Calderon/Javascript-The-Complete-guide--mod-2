@@ -34,7 +34,7 @@ function subtract() {
 function multiply() {
   const enteredNumber = getUserInput();
   const initialResult = currentResult;
-  currentResult = currentResult * enteredNumber;
+  currentResult *= enteredNumber;
   createOutput("*", initialResult, enteredNumber);
 }
 
@@ -42,7 +42,8 @@ function multiply() {
 function divide() {
   const enteredNumber = getUserInput();
   const initialResult = currentResult;
-  currentResult = currentResult / enteredNumber;
+  currentResult /= enteredNumber;
+  //You can use /= to equal divide equal in the same way you use +=
   createOutput("/", initialResult, enteredNumber);
   alert("divide");
 }
@@ -53,3 +54,5 @@ addBtn.addEventListener("click", add);
 divideBtn.addEventListener("click", divide);
 multiplyBtn.addEventListener("click", multiply);
 subtractBtn.addEventListener("click", subtract);
+
+//Remember that you can use -- or ++ to add or subtract 1 in either direction I.E. currentResult++ would add it
