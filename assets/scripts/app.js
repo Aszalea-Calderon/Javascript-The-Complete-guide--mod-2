@@ -7,10 +7,10 @@ function getUserInput() {
   return parseInt(userInput.value);
 }
 
-//Creates output
+//Creates output to the page
 function createOutput(operator, resultBeforeCal, calNumber) {
   const calcDescription = `${resultBeforeCal} ${operator} ${calNumber}`;
-  outputResult(currentResult, calcDescription);
+  outputResult(currentResult, calcDescription); //From vendor file
 }
 
 //Add functions
