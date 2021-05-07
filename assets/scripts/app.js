@@ -26,7 +26,7 @@ function add() {
 function subtract() {
   const enteredNumber = getUserInput();
   const initialResult = currentResult;
-  currentResult = currentResult - enteredNumber;
+  currentResult -= enteredNumber;
   createOutput("-", initialResult, enteredNumber);
 }
 
